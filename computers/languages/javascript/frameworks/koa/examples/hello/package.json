@@ -1,0 +1,13 @@
+{
+  "name": "@knowler/learning-koa-hello",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
