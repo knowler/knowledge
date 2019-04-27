@@ -1,14 +1,20 @@
 import React from 'react'
-import { Title } from './components/Title'
-import { Info } from './components/Info'
+import { ThemeProvider } from './components/ThemeProvider'
+import { Main } from './components/Main'
+import { ToggleThemeButton } from './components/ToggleThemeButton'
+
+const app = {
+  title: 'Hello, World!',
+  info: 'An app demonstrating context and hooks.',
+}
 
 export const AppContext = React.createContext({})
 
 export const App = () => (
-  <AppContext.Provider value={{ title: 'My App' }}>
-    <main>
-      <Title />
-      <Info />
-    </main>
+  <AppContext.Provider value={app}>
+    <ThemeProvider>
+      <Main />
+      <ToggleThemeButton />
+    </ThemeProvider>
   </AppContext.Provider>
 )
